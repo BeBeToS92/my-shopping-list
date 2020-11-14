@@ -1,0 +1,51 @@
+{
+    "ALERT": {
+        "ok": "OK",
+        "cancel": "Cancel",
+        "loading": "Loading...",
+        "error": "Error"
+    },
+
+    "ERROR": {
+        "retrieve_list": "Unable to retrieve the list",
+        "delete_list": "Unable to delete the list",
+        "add_elem": "Unable to save the element",
+        "delete_elem": "Unable to delete the element"
+    },
+
+    "LOGIN": {
+        "need_account": "Need an account?",
+        "wrong_credentials": "Wrong credentials",
+        "login": "Login",
+        "logout": "Logout",
+        "register": "Sign up",
+        "save_credentials": "Save credentials"
+    },
+
+    "REGISTER": {
+        "completed": "Registration completed successfully",
+        "not_matching_password": "Passwords don't match"
+    },
+
+    "SHOPS": {
+        "title": "Shops",
+        "add": "Add shop",
+        "empty_list": "Empty list",
+        "bought": "bought"
+    },
+
+    "CART": {
+        "add": "Add product"
+    },
+
+    "SETTINGS": {
+        "title": "Settings",
+        "apparences": "Style",
+        "toggle_dark": "Toggle dark theme",
+        "language": "Language",
+        "italian": "Italian",
+        "english": "English",
+        "profile": "Profile",
+        "change_password": "Change password"
+    }
+}

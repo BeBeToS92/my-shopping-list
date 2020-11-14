@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ 'SHOPS.title' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding no-bounce>
+  <div class="operation-bar">
+    <ion-card>
+      <ion-card-content>
+        <h2>{{ 'SHOPS.add' | translate}}:</h2>
+        <ion-row>
+          <ion-col size="9">
+            <ion-input style="width:100%; border-bottom: 1px solid #000000;" [(ngModel)]="newItem"></ion-input>
+          </ion-col>
+          <ion-col size="3">
+            <ion-button style="float: right;" (click)="add()" [disabled]="!newItem">
+              <ion-icon name="add-outline"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="list-div">
+    <ion-list>
+      <ion-item-sliding *ngFor="let item of list" >
+        <ion-item [routerLink]="['/cart/', item.id]" routerDirection="forward" detail="false">
+          <ion-label>
+            <h2>{{ item.name }}</h2>
+            <h3 *ngIf="item.total != 0">{{ item.bought }} / {{ item.total }} {{ 'SHOPS.bought' | translate }}</h3>
+            <h3 *ngIf="item.total == 0">{{ 'SHOPS.empty_list' | translate }}</h3>
+          </ion-label>
+          <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-item-options side="end">
+          <ion-item-option color="danger" (click)="delete(item)">
+            <ion-icon name="trash-outline"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+
+    </ion-list>
+  </div>
+</ion-content>

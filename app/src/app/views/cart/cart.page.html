@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button [routerLink]="['/shops/']">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+      <ion-title> {{ details.name }} </ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="operation-bar">
+    <ion-card>
+      <ion-card-content>
+        <h2>{{ 'CART.add' | translate }}:</h2>
+        <ion-row>
+          <ion-col size="9">
+            <ion-input style="width:100%; border-bottom: 1px solid #000000;" [(ngModel)]="newItem"></ion-input>
+          </ion-col>
+          <ion-col size="3">
+            <ion-button style="float: right;" (click)="add()" [disabled]="!newItem">
+              <ion-icon name="add-outline"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card style="margin-bottom: 2px;">
+      <ion-searchbar (ionChange)="search()" [(ngModel)]="searchItem" debounce=50></ion-searchbar>
+    </ion-card>
+  </div>
+
+  <div class="list-div" *ngIf="details.items.length > 0">
+    <ion-list lines="none">
+      <ion-card *ngFor="let item of details.items" style="margin-top: 5px; margin-bottom: 2px;">
+        <ion-item [ngClass]="{'hide': item.hide, 'unavailable': item.unavailable}">
+          <ion-checkbox mode="md" slot="start" [(ngModel)]="item.boughtBoolean" [disabled]="item.unavailable" (click)="bought(item)" ></ion-checkbox>
+          <ion-label [ngClass]="{'strikeout': item.boughtBoolean}">{{ item.name }}</ion-label>
+          <ion-button (click)="notFound(item)" [disabled]="item.boughtBoolean">
+            <ion-icon name="search-outline"></ion-icon>
+          </ion-button>
+          <ion-button color="danger" (click)="delete(item)">
+            <ion-icon name="close-outline"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-card>
+    </ion-list>
+  </div>
+
+</ion-content>
+
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button color="danger" (click)="emptyList()">
+    <ion-icon name="trash-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

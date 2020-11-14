@@ -1,0 +1,24 @@
+.operation-bar {
+    height: 29%;
+    position: sticky;
+}
+
+.list-div {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow: auto;
+    height: 79%;
+}
+
+.strikeout {
+    text-decoration: line-through;
+    color: #AFAFAF;
+}
+
+.hide {
+    display: none;
+}
+
+.unavailable {
+    color: red;
+}

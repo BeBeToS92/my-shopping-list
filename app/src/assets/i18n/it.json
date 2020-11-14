@@ -1,0 +1,51 @@
+{
+    "ALERT": {
+        "ok": "OK",
+        "cancel": "Annulla",
+        "loading": "Caricamento...",
+        "error": "Errore"
+    },
+
+    "ERROR": {
+        "retrieve_list": "Impossibile recuperare la lista",
+        "delete_list": "Impossibile cancellare la lista",
+        "add_elem": "Impossibile salvare il nuovo elemento",
+        "delete_elem": "Impossibile cancellare l'elemento"
+    },
+
+    "LOGIN": {
+        "need_account": "Hai bisogno di un account?",
+        "wrong_credentials": "Credenziali errate",
+        "login": "Entra",
+        "logout": "Esci",
+        "register": "Registrati",
+        "save_credentials": "Ricorda credenziali"
+    },
+    
+    "REGISTER": {
+        "completed": "Registrazione avvenuta con successo",
+        "not_matching_password": "Le due password non coincidono"
+    },
+
+    "SHOPS": {
+        "title": "Negozi",
+        "add": "Aggiungi negozio",
+        "empty_list": "Lista vuota",
+        "bought": "comprati"
+    },
+
+    "CART": {
+        "add": "Aggiungi prodotto"
+    },
+
+    "SETTINGS": {
+        "title": "Impostazioni",
+        "apparences": "Stile",
+        "toggle_dark": "Abilita tema scuro",
+        "language": "Lingua",
+        "italian": "Italiano",
+        "english": "Inglese",
+        "profile": "Profilo",
+        "change_password": "Cambia password"
+    }
+}

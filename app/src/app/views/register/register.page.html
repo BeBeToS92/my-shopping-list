@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button [routerLink]="['/login/']">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+      <ion-title> Registrati </ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div>
+    <form #form="ngForm">
+      <ion-grid>
+        <ion-row color="primary" justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+           <div >
+              <ion-item class="ion-padding-end ion-padding-start">
+                <ion-label position="floating">Email</ion-label>
+                <ion-input name="email" type="email" placeholder="your@email.com" [(ngModel)]="email" required></ion-input>
+              </ion-item>
+              <ion-item class="ion-padding-end ion-padding-start">
+                <ion-label position="floating">Password</ion-label>
+                <ion-input name="password" [(type)]="inputType" [(ngModel)]="password" required></ion-input>
+                <ion-icon style="padding-top: 5%;" [(name)]="icon" (click)="showHidePassword()" slot="end"></ion-icon>
+              </ion-item>
+              <ion-item class="ion-padding-end ion-padding-start">
+                <ion-label position="floating">Ripeti password</ion-label>
+                <ion-input name="repeat-password" [(type)]="inputType" [(ngModel)]="repeatPassword" required></ion-input>
+                <ion-icon style="padding-top: 5%;" [(name)]="icon" (click)="showHidePassword()" slot="end"></ion-icon>
+              </ion-item>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+    <ion-row>
+      <ion-col align-self-center>
+         <ion-button size="large" type="submit" [disabled]="form.invalid"  expand="block"  (click)="register()" >Registrati</ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <!-- Validate email step -->
+  <div>
+
+  </div>
+</ion-content>
