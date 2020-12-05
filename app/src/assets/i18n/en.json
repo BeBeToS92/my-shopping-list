@@ -35,7 +35,8 @@
     },
 
     "CART": {
-        "add": "Add product"
+        "add": "Add product",
+        "delete": "Do you want to delete the list?"
     },
 
     "SETTINGS": {

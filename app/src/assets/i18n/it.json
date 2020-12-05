@@ -35,7 +35,8 @@
     },
 
     "CART": {
-        "add": "Aggiungi prodotto"
+        "add": "Aggiungi prodotto",
+        "delete": "Vuoi eliminare la lista?"
     },
 
     "SETTINGS": {

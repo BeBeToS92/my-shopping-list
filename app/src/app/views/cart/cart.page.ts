@@ -117,6 +117,19 @@ export class CartPage implements OnInit {
     );
   }
 
+  askToDelete(){
+    let msg = this.langService.getString('CART.delete');
+
+    this.alertService.showConfirmAlert('', msg).then(
+      (alert) => { alert.present();
+
+        alert.onDidDismiss().then( (resp) => {
+          this.emptyList();
+        });
+      });
+  }
+
+
   emptyList() {
 
     this.alertService.showLoading().then(

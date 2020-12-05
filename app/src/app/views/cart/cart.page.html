@@ -52,8 +52,8 @@
 </ion-content>
 
 
-<ion-fab vertical="bottom" horizontal="end" slot="fixed">
-  <ion-fab-button color="danger" (click)="emptyList()">
+<ion-fab vertical="bottom" horizontal="end" slot="fixed" *ngIf="details.items.length > 0">
+  <ion-fab-button color="danger" (click)="askToDelete()">
     <ion-icon name="trash-outline"></ion-icon>
   </ion-fab-button>
 </ion-fab>

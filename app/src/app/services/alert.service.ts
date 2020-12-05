@@ -43,6 +43,35 @@ export class AlertService {
     return this.loadingController.create({
       message: message
     });
-
   }
+
+
+  showConfirmAlert(title: string, msg: string, subtitle?: string, btnMessage?: string) {
+    let textBtn = this.language.getString('ALERT.ok');
+
+    if (btnMessage != null)
+      textBtn = btnMessage;
+    
+    return this.alertController.create({
+      header: title,
+      subHeader: subtitle,
+      message: msg,
+      buttons: [
+        {
+          text: this.language.getString('ALERT.cancel'),
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            return false;
+          }
+        }, {
+          text: textBtn,
+          handler: () => {
+            return true;
+          }
+        }
+      ]
+    });
+  }
+
 }
