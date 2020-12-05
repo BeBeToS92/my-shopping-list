@@ -11,6 +11,7 @@ The repository is organizated in two folders: one for the app and one for the se
 ### App ###
 
 The app is build using Ionic 5 and Angular 10.
+A special thanks to my friend Alessandro Valenti for angular advice.
 
 Before running the app take a look to *configuration.json_sample* inside assets folder and set variables.
 
